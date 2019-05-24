@@ -1,0 +1,87 @@
+<md-whiteframe class="md-whiteframe-1dp" ui-view layout="row" flex
+               style="overflow: hidden; margin: 10px; background-color: white;">
+
+    <div layout="column" layout-align="start start">
+        <h1 align="center"> Agregar nuevo paciente</h1>
+        <div>
+            <md-input-container>
+                <label>Nombre</label>
+                <input ng-model="paciente.nombre">
+            </md-input-container>
+
+            <md-input-container>
+                <label>Apellido Paterno</label>
+                <input ng-model="paciente.ap_Pat">
+            </md-input-container>
+
+            <md-input-container>
+                <label>Apellido Materno</label>
+                <input ng-model="paciente.ap_Mat">
+            </md-input-container>
+
+            <md-input-container>
+                <label>Fecha de nacimiento</label>
+                <md-datepicker ng-model="paciente.fecha_Na"></md-datepicker>
+            </md-input-container>
+        </div>
+        <div>
+            <md-input-container>
+                <label>Edad</label>
+                <input ng-model="paciente.edad">
+            </md-input-container>
+
+            <md-input-container>
+                <label>Sexo</label>
+                <input ng-model="paciente.sexo">
+            </md-input-container>
+
+            <md-input-container>
+                <label>Ocupación</label>
+                <input ng-model="paciente.ocupacion">
+            </md-input-container>
+        </div>
+
+        <section layout="row" layout-align="center center">
+            <md-button class="md-raised">Agregar</md-button>
+            <md-button class="md-raised">Limpiar formulario</md-button>
+        </section>
+
+        <h1 align="center">Buscar pacientes</h1>
+
+        <div layout="row" layout-align="end center">
+
+        <md-input-container>
+            <label>Apellidos</label>
+            <input ng-model="user.paciente">
+        </md-input-container>
+
+        <div layout="column" flex id="divTablaInicio2">
+            <table>
+                <tr>
+                    <th>Identificador</th>
+                    <th>Nombre</th>
+                    <th>Apellido paterno</th>
+                    <th>Apellido materno</th>
+                    <th>Fecha de nacimiento</th>
+                    <th>Edad</th>
+                    <th>Sexo</th>
+                    <th>Ocupación</th>
+                </tr>
+                <tr ng-repeat="paciente in pacientes" ng-click="selectPaciente(paciente)" align="center">
+                    <td align="center">{{paciente.id}}</td>
+                    <td align="center">{{paciente.nombre}}</td>
+                    <td align="center">{{paciente.ape_Pa}}</td>
+                    <td align="center">{{paciente.ape_Ma}}</td>
+                    <td align="center">{{paciente.nacimiento}}</td>
+                    <td align="center">{{paciente.edad}}</td>
+                    <td align="center">{{paciente.sexo}}</td>
+                    <td align="center">{{paciente.ocupacion}}</td>
+                </tr>
+            </table>
+        </div>
+        </div>
+        <section layout="row" layout-align="center center">
+            <md-button class="md-raised">Buscar</md-button>
+        </section>
+    </div>
+</md-whiteframe>

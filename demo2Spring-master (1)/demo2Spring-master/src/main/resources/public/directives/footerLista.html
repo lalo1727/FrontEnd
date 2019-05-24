@@ -1,0 +1,34 @@
+<!-- Barra de herramientas del footer control -->
+	<div id="footerLista" style="height: 20px; border-top: 1px solid #ddd;" flex="none"
+		 layout="row" layout-align="start center">
+
+		<!-- Paginador del grid -->
+		<md-button class="md-icon-button" aria-label="Inicio"
+				   ng-disabled="control.lista.bInicio" ng-click="control.inicio()">
+			<md-icon md-svg-icon="icons/ic_skip_previous_18px.svg"></md-icon>
+		</md-button>
+		<md-button class="md-icon-button" aria-label="Retroceder"
+				   ng-disabled="control.lista.bAnterior" ng-click="control.retroceder()">
+			<md-icon md-svg-icon="icons/ic_fast_rewind_18px.svg"></md-icon>
+		</md-button>
+		<div style="font-size: .8em; padding: 0px 10px;">
+			Página {{ control.pagina }} de {{ control.paginas }}
+		</div>
+		<md-button class="md-icon-button" aria-label="Avanzar"
+				   ng-disabled="control.lista.bSiguiente" ng-click="control.avanzar()">
+			<md-icon md-svg-icon="icons/ic_fast_forward_18px.svg"></md-icon>
+		</md-button>
+		<md-button class="md-icon-button" aria-label="Fin"
+				   ng-disabled="control.lista.bFin" ng-click="control.fin()">
+			<md-icon md-svg-icon="icons/ic_skip_next_18px.svg"></md-icon>
+		</md-button>
+		<p style="width: 100px"></p>
+		<div style="font-size: .8em; padding: 0px 10px;">
+			Buscar página
+		</div>
+		<md-button class="md-icon-button" ng-click="control.buscar()">
+			<md-icon md-svg-icon="icons/ic_search_18px.svg"></md-icon>
+		</md-button>
+		<p ><input ng-model="control.pag" placeholder="100" style="width: 20%; font-size: .8em; padding: 0px 10px;"></p>
+		
+	</div>

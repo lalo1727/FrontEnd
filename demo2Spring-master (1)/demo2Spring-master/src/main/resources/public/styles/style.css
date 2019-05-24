@@ -1,0 +1,67 @@
+table {
+    font-family: arial;
+    font-size: 11px;
+    border-collapse: collapse;
+   	width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 6px;
+}
+
+#divTabla {
+     overflow:scroll;
+     overflow-x:hidden;
+     height:280px;
+}
+
+.tabla {
+    color: #333;
+    font-family: sans-serif;
+    font-size: .8em;
+    font-weight: 300;
+    text-align: left;
+    line-height: 40px;
+    border-spacing: 0;
+}
+
+#divTablaInicio {
+     overflow:scroll;
+     overflow-x:hidden;
+     height: 95%;
+}
+
+.itemTabla:hover  {
+    background-color: #E8EAF6;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.angular-google-map-container {
+        height: 250px;
+        width: 100%;
+}
+
+
+CSS
+HTMLJSCSS
+.buttondemoBasicUsage section {
+  border-radius: 3px;
+  text-align: center;
+  margin: 1em;
+  position: relative !important; }
+
+.buttondemoBasicUsage section .md-button {
+  margin-top: 16px;
+  margin-bottom: 16px; }
+
+.buttondemoBasicUsage .label {
+  position: absolute;
+  bottom: 5px;
+  left: 7px;
+  font-size: 14px;
+  opacity: 0.54; }

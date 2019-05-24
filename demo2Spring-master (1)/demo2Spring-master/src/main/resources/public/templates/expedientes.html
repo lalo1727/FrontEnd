@@ -1,0 +1,132 @@
+	<md-whiteframe class="md-whiteframe-1dp" ui-view layout="column" flex 
+	style="overflow: hidden; margin: 10px; background-color: white;">
+
+	<div layout="row">
+		<div layout="column">
+
+			<div layout-gt-sm="row" layout-padding>
+				<md-input-container>
+					<label>Cita</label>
+					<md-datepicker ng-model="user.submissionDate"></md-datepicker>
+				</md-input-container>
+
+				<md-input-container>
+					<label>Paciente</label>
+					<input ng-model="user.paciente">
+				</md-input-container>
+
+				<md-button class="md-fab md-primary md-hue-2" aria-label="Profile">
+        
+        		</md-button>
+			</div>
+
+			<div layout-gt-sm="row" layout-padding>
+
+				<md-input-container>
+					<label>Enfermedad</label>
+					<input ng-model="user.enfermedad">
+				</md-input-container>
+
+				<md-input-container>
+					<label>Operaciones</label>
+					<input ng-model="user.operaciones">
+				</md-input-container>
+
+				<md-input-container>
+					<label>Análisis</label>
+					<input ng-model="user.analisis">
+				</md-input-container>
+			</div>
+
+			<div layout-gt-sm="row" layout-padding>
+
+				<md-input-container>
+					<label>Tipo de sangre</label>
+					<input ng-model="user.sangre">
+				</md-input-container>
+
+				<md-input-container>
+					<label>Diagnóstico</label>
+					<input ng-model="user.diagnostico">
+				</md-input-container>
+
+				<md-input-container>
+					<label>Medicamento</label>
+					<input ng-model="user.medicamentos">
+				</md-input-container>
+			</div>
+
+		</div>
+
+		<div layout="column">
+
+			<md-card md-theme="{{ showDarkTheme ? 'dark-blue' : 'default' }}" md-theme-watch>
+				<md-card-title>
+					<md-card-title-text>
+						<span class="md-headline">NOMBRE COMPLETO</span>
+						<span class="md-subhead">43276</span>
+					</md-card-title-text>
+					<md-card-title-media>
+						<div class="md-media-md card-media"></div>
+					</md-card-title-media>
+				</md-card-title>
+			</md-card>
+
+			<md-card md-theme="{{ showDarkTheme ? 'dark-blue' : 'default' }}" md-theme-watch>
+				<div layout="column" id="divTablaInicio1" style="max-height: 170px;">
+					<table>
+						<tr>
+							<th>Identificador</th>
+							<th>Nombre</th>
+						 	<th>Tipo</th>
+				  		</tr>
+				      	<tr ng-repeat="enfermedad in enfermedades" ng-click="selectEnfermedad(enfermedad)" align="center">
+				        	<td align="center">{{enfermedad.id}}</td>
+				        	<td align="center">{{enfermedad.nombre}}</td>
+				        	<td align="center">{{enfermedad.tipo}}</td>
+				      	</tr>
+				    </table>
+				</div>
+			</md-card>
+
+		</div>
+
+	</div>
+
+
+	<div layout="row">
+
+		<div layout="column" >
+			<h4 align="center">Buscar pacientes</h4>
+			<md-input-container align="center">
+				<label>Apellidos</label>
+				<input ng-model="user.paciente">
+			</md-input-container>
+			<md-button>Buscar</md-button>
+		</div>
+
+		<div layout="column" flex id="divTablaInicio">
+			<table>
+				<tr>
+					<th>Identificador</th>
+					<th>Nombre</th>
+				 	<th>Apellidos</th>
+				    <th>Fecha nacimiento</th>
+				    <th>Edad</th> 
+				    <th>Sexo</th> 
+				    <th>Ocupación</th>
+		  		</tr>
+		      	<tr ng-repeat="paciente in pacientes" ng-click="selectPaciente(paciente)" align="center">
+		        	<td align="center">{{paciente.id}}</td>
+		        	<td align="center">{{paciente.nombre}}</td>
+		        	<td align="center">{{paciente.apellidos}}</td>
+		        	<td align="center">{{paciente.nacimiento}}</td>
+		        	<td align="center">{{paciente.edad}}</td>
+		        	<td align="center">{{paciente.sexo}}</td>
+		        	<td align="center">{{paciente.ocupacion}}</td>
+		      	</tr>
+		    </table>
+		</div>
+	</div>
+
+</md-whiteframe>
